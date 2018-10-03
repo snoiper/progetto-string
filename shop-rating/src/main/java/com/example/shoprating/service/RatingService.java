@@ -58,16 +58,21 @@ public class RatingService {
 	}
 
 	public List<ProdottoRecensito> getPopular() {
-		//tutti i prodotti
+		//tutti le valutazioni
 		List<Valutazione> tempVal = (List<Valutazione>) repo.findAll();
 		
 		double somma = 0;
 		
 		for(int i = 0; i < tempVal.size(); i++) {
-			somma = tempVal.get(i).getRate();
+			somma += tempVal.get(i).getRate();
 		}
 		
 		double media = somma / tempVal.size();
+		
+		System.out.println("+++++ SIZE: " + tempVal.size());
+		System.out.println("+++++ SOMMA: " + somma);
+		System.out.println("+++++ MEDIA: " + media);
+		
 		//creo una variabile vuota nella quale andranno tutti i prodotti sopra la media
 		List<ProdottoRecensito> belli = new ArrayList<ProdottoRecensito>() ;
 		
