@@ -1,10 +1,8 @@
 package com.example.shoprating.service;
 
+import java.awt.print.Pageable;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,5 +1,6 @@
 package com.example.shoprating.rest;
 
+import java.awt.print.Pageable;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.shoprating.domain.ProdottoRecensito;
 import com.example.shoprating.domain.RateRequest;
 import com.example.shoprating.domain.Valutazione;
-import com.example.shoprating.service.CatalogService;
 import com.example.shoprating.service.RatingService;
 
 @RestController
